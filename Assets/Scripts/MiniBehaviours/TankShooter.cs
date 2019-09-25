@@ -31,24 +31,26 @@ namespace MiniBehaviours
         {
             if (weaponId > WeaponInventory.Length)
                 return;
+            if (_currentWeapon.CurrentState != Weapon.WeaponStates.WeaponIdle)
+                return;
             _currentWeapon = WeaponInventory[weaponId];
             _currentWeaponId = weaponId;
-            
-            foreach (var item in WeaponInventory.Select((value, i) => new { i, value }))
+
+            foreach (var item in WeaponInventory.Select((value, i) => new {i, value}))
             {
                 if (item.i != _currentWeaponId)
                 {
                     item.value.gameObject.SetActive(false);
                     continue;
                 }
+
                 item.value.gameObject.SetActive(true);
             }
-
         }
 
         private void SwapWeapon()
         {
-            _currentWeaponId = _currentWeaponId == WeaponInventory.Length-1 ? 0 : ++_currentWeaponId;
+            _currentWeaponId = _currentWeaponId == WeaponInventory.Length - 1 ? 0 : ++_currentWeaponId;
             SetWeapon(_currentWeaponId);
         }
 
