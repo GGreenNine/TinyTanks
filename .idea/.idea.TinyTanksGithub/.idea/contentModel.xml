@@ -9,9 +9,6 @@
             <e p="MergeSorting.cs" t="Include" />
             <e p="PolyndormsChecker.cs" t="Include" />
           </e>
-          <e p="Cameras" t="Include">
-            <e p="FollowingCamera2D.cs" t="Include" />
-          </e>
           <e p="Containters" t="Include">
             <e p="MyListT.cs" t="Include" />
           </e>
@@ -24,38 +21,23 @@
             <e p="ProjecticePrediction.cs" t="Include" />
           </e>
           <e p="Math" t="Include">
-            <e p="Cuboid.cs" t="Include" />
             <e p="HappyMath.cs" t="Include" />
-            <e p="Intersector.cs" t="Include" />
-            <e p="VectorExtensions.cs" t="Include" />
           </e>
           <e p="ObjectPools" t="Include">
             <e p="ObjectPool.cs" t="Include" />
             <e p="Poolable.cs" t="Include" />
           </e>
           <e p="Singletons" t="Include">
-            <e p="LazyPersistentSingleton.cs" t="Include" />
-            <e p="LazySingleton.cs" t="Include" />
-            <e p="PersistentSingleton.cs" t="Include" />
+            <e p="EverlastingSingleton.cs" t="Include" />
             <e p="Singleton.cs" t="Include" />
           </e>
           <e p="TransformUtils" t="Include">
-            <e p="CameraScaleKeeper.cs" t="Include" />
             <e p="FollowTarget.cs" t="Include" />
-            <e p="JumpPerformer.cs" t="Include" />
             <e p="RandomCirclePositionGeneration.cs" t="Include" />
             <e p="RandomCirclePositionGenerationTest.cs" t="Include" />
-            <e p="RotationMotor.cs" t="Include" />
-            <e p="SmoothMover.cs" t="Include" />
-            <e p="TransformExtensions.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
-            <e p="FollowLinkButton.cs" t="Include" />
-            <e p="PressableButton.cs" t="Include" />
             <e p="ScreenLogger.cs" t="Include" />
-            <e p="TextFontSwitcher.cs" t="Include" />
-            <e p="TouchScreenEditableText.cs" t="Include" />
-            <e p="UIUtils.cs" t="Include" />
           </e>
         </e>
         <e p="Scripts" t="Include">

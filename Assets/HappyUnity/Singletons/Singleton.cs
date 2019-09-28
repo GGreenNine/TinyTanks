@@ -1,43 +1,50 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace HappyUnity.Singletons
 {
-    public abstract class Singleton<T> : MonoBehaviour where T : Singleton<T>
+    public class Singleton<T> : MonoBehaviour where T : Component
     {
-        public static T Instance { get; private set; }
-        protected virtual void OnEnable()
+        /// <summary>
+        /// Singleton pattern
+        /// </summary>
+        protected static T _instance;
+
+        public static T Instance
         {
-            if (!Application.isPlaying)
+            get
             {
-                return;
-            }
-            if (Instance == null)
-            {
-                Instance = this as T;
-                Debug.Log(" Is loaded \t" + typeof(T));
+                if (_instance == null)
+                {
+                    _instance = FindObjectOfType<T>();
+                    if (_instance == null)
+                    {
+                        GameObject newInstance = new GameObject();
+                        _instance = newInstance.AddComponent<T>();
+                    }
+                }
+
+                return _instance;
             }
         }
 
-        protected virtual void OnDisable()
+        protected virtual void Awake()
         {
             if (!Application.isPlaying)
             {
                 return;
             }
 
-            if (Instance == null)
+            if (_instance == null)
             {
-                Instance = this as T;
+                _instance = this as T;
             }
-            else 
+            else
             {
-                Destroy(gameObject);
-                Debug.Log($"This singleton has already exists {typeof(T)}");
+                Destroy(this);
             }
         }
     }
+
 }

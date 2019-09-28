@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Asteroids
 {
-    public class Pause : LazyPersistentSingleton<Pause>
+    public class Pause : Singleton<Pause>
     {
         private static bool IsPaused = false;
         public static WaitForSeconds Long()

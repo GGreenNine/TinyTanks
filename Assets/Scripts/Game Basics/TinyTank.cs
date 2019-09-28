@@ -34,9 +34,8 @@ public class TinyTank : GameUnit
     }
     public void ResetPosition()
     {
-        //transform.position = GameField.GetRandomWorldPositionXY(transform);
-        transform.rotation = Quaternion.identity;
-    }
+        transform.position = new Vector2(9,7);
+        transform.rotation = Quaternion.identity;}
 
     public void ResetRigidbody()
     {

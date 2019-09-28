@@ -115,10 +115,10 @@ GameObject:
   - component: {fileID: 6444872595494590413}
   - component: {fileID: 8421909670619013754}
   - component: {fileID: -2690185524201003439}
-  - component: {fileID: 4956595274143733317}
   - component: {fileID: -4681452968243751185}
   - component: {fileID: 7171640958433337150}
   - component: {fileID: -8368536156950434575}
+  - component: {fileID: 9045634896098147221}
   m_Layer: 8
   m_Name: R2D2
   m_TagString: Untagged
@@ -394,24 +394,6 @@ MonoBehaviour:
   isAbleToKnockBack: 0
   destructionScore: 100
   target: {fileID: 0}
---- !u!114 &4956595274143733317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6836770297544717746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7609770f9321db4eb7704851281a42d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  smoothTime: 10
-  maxSpeed: 20
-  facing: 1
-  stopWhenReach: 1
-  endPrecision: 0.1
-  useFixedDeltaTime: 0
 --- !u!114 &-4681452968243751185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,3 +452,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InitialArmor: 0.8
+--- !u!114 &9045634896098147221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6836770297544717746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e88f247ff334715bc35e8285db8f4f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FollowPosition: 1
+  FollowRotation: 0
+  Target: {fileID: 0}
+  Offset: {x: 0, y: 0, z: 0}
+  AddInitialDistanceXToXOffset: 0
+  AddInitialDistanceYToYOffset: 0
+  AddInitialDistanceZToZOffset: 0
+  InterpolatePosition: 1
+  InterpolateRotation: 1
+  FollowPositionSpeed: 0.2
+  FollowRotationSpeed: 1
+  UpdateMode: 2
+  FollowPositionX: 1
+  FollowPositionY: 1
+  FollowPositionZ: 1

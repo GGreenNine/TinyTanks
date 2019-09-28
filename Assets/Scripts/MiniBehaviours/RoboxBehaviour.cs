@@ -5,21 +5,17 @@ using UnityEngine;
 
 public class RoboxBehaviour : EnemyUnit
 {
-    private SmoothMover _smoothMover;
+    private FollowTarget _smoothMover;
     public Transform target;
     
     protected override void Awake()
     {
         base.Awake();
-        _smoothMover = gameObject.GetComponent<SmoothMover>();
+        _smoothMover = gameObject.GetComponent<FollowTarget>();
     }
     
     private void FixedUpdate()
     {
-        if (target)
-        {
-            _smoothMover.Move();
-        }
     }
     
     protected override void RequestDestruction()
@@ -37,7 +33,7 @@ public class RoboxBehaviour : EnemyUnit
     
     public void ConfigureSmoothMover()
     {
-        _smoothMover.TargetPosition = target;
-        _smoothMover.BeginMoving();
+        _smoothMover.Target = target;
+        _smoothMover.StartFollowing();
     }
 }

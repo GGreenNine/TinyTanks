@@ -16,9 +16,8 @@ namespace Asteroids
             ScoreUi.Awake();
         }
 
-        protected override void OnEnable()
+        protected void OnEnable()
         {
-            base.OnEnable();
             ScoreUi.OnEnable();
         }
 

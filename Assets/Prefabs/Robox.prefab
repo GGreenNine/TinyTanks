@@ -119,10 +119,10 @@ GameObject:
   - component: {fileID: 4774315973131364071}
   - component: {fileID: 6664234413187910354}
   - component: {fileID: -2126637802017050760}
-  - component: {fileID: -1937437523597923842}
   - component: {fileID: 6573965932802496632}
   - component: {fileID: -145756504529714613}
   - component: {fileID: 374170366177368647}
+  - component: {fileID: 8128319530680670990}
   m_Layer: 8
   m_Name: Robox
   m_TagString: Untagged
@@ -398,24 +398,6 @@ MonoBehaviour:
   autoRespawnDuration: 1
   respawnEffect: {fileID: 1381411408848946, guid: 742aa2597f768ea48a9deac128e23360,
     type: 3}
---- !u!114 &-1937437523597923842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9041406063973078653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7609770f9321db4eb7704851281a42d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  smoothTime: 10
-  maxSpeed: 10
-  facing: 1
-  stopWhenReach: 1
-  endPrecision: 0.1
-  useFixedDeltaTime: 0
 --- !u!114 &6573965932802496632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,3 +456,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InitialArmor: 1
+--- !u!114 &8128319530680670990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9041406063973078653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e88f247ff334715bc35e8285db8f4f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FollowPosition: 1
+  FollowRotation: 1
+  Target: {fileID: 0}
+  Offset: {x: 0, y: 0, z: 0}
+  AddInitialDistanceXToXOffset: 0
+  AddInitialDistanceYToYOffset: 0
+  AddInitialDistanceZToZOffset: 0
+  InterpolatePosition: 1
+  InterpolateRotation: 1
+  FollowPositionSpeed: 0.2
+  FollowRotationSpeed: 1
+  UpdateMode: 2
+  FollowPositionX: 1
+  FollowPositionY: 1
+  FollowPositionZ: 1

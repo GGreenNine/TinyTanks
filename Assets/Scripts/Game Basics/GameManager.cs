@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using HappyUnity.Cameras;
+using Cinemachine;
 using HappyUnity.Singletons;
 using HappyUnity.Spawners;
 using HappyUnity.Spawners.ObjectPools;
@@ -22,7 +22,7 @@ namespace Asteroids
         public GameField GameField;
 
         private GameScreenLogger gameScreenLogger;
-        private FollowingCamera2D _followingCamera2D;
+        private CinemachineVirtualCamera _followingCamera2D;
         TinyTank tank;
 
         private ObjectPool _chicken_Pool;
@@ -69,7 +69,7 @@ namespace Asteroids
             _r2d2_Pool = ObjectPool.Build(Enemy_Rd2d, 25, 25);
             _chicken_Pool = ObjectPool.Build(Enemy_Chicken, 25, 25);
             _robox25_Pool = ObjectPool.Build(Enemy_Robox25, 25, 25);
-            _followingCamera2D = Camera.main.GetComponent<FollowingCamera2D>();
+            _followingCamera2D = FindObjectOfType<CinemachineVirtualCamera>();
 
             EnemyPools.Add(_r2d2_Pool);
             EnemyPools.Add(_chicken_Pool);
@@ -126,7 +126,7 @@ namespace Asteroids
 
         IEnumerator StartLevel()
         {
-            _followingCamera2D.SetTarget(tank.transform);
+            _followingCamera2D.Follow = (tank.transform);
             tank.Spawn();
             tank.EnableControls();
             gameScreenLogger.Clear_Text();
