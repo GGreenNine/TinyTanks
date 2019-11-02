@@ -23,7 +23,7 @@ namespace Asteroids
 
         private GameScreenLogger gameScreenLogger;
         private CinemachineVirtualCamera _followingCamera2D;
-        TinyTank tank;
+        private TinyTank tank;
 
         private ObjectPool _chicken_Pool;
         private ObjectPool _r2d2_Pool;
@@ -84,8 +84,15 @@ namespace Asteroids
             tank = TinyTank.Create(Tank_Prefab);
             tank._health.On_Death += HealthOnOnDeath;
             tank.RemoveFromGame();
-            TinyTank.OnTankDeath += delegate { SetGameState(GameState.End); };
             StartCoroutine(Background_Game_Workflow());
+        }
+
+        private void OnDestroy()
+        {
+            /*
+             * Memory leak avoiding
+             */
+            tank._health.On_Death -= HealthOnOnDeath;
         }
 
         private void HealthOnOnDeath()

@@ -1,33 +1,23 @@
+using Game_Basics;
 using UnityEngine;
 
 namespace MiniBehaviours
 {
-    public class TankInput : MonoBehaviour
+    public class TankInput : IController
     {
-        public static bool IsShooting()
-        {
-            return Input.GetButtonDown("Fire1");
-        }
+        public bool IsShooting => Input.GetButtonDown("Fire1");
 
-        public static bool IsHyperspacing()
-        {
-            return Input.GetButtonDown("Fire2");
-        }
+        public bool ChangeWeapon => (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.E));
 
-        public static float GetTurnAxis()
-        {
-            return Input.GetAxis("Horizontal");
-        }
+        public float GetTurnAxis => Input.GetAxis("Horizontal");
 
-        public static float GetForwardThrust()
+        public float GetForwardAxis
         {
-            float axis = Input.GetAxis("Vertical");
-            return Mathf.Clamp(axis, -1,1);
-        }
-
-        public static bool ChangeWeapon()
-        {
-            return (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.E));
+            get
+            {
+                float axis = Input.GetAxis("Vertical");
+                return Mathf.Clamp(axis, -1, 1);
+            }
         }
     }
 }

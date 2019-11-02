@@ -1,9 +1,11 @@
 using System;
+using CryoDI;
+using Game_Basics;
 using UnityEngine;
 
 namespace MiniBehaviours
 {
-    public class TankMovement : MonoBehaviour
+    public class TankMovement : CryoBehaviour
     {
         public float maxSpeed = 300f;
         public float thrust = 1000f;
@@ -11,6 +13,8 @@ namespace MiniBehaviours
         private float thrustInput;
         private float torqueInput;
         private Rigidbody2D rb;
+
+        [TypeDependency(typeof(TankMovement))] private IController TankInput { get; set; }
 
         private void Move()
         {
@@ -30,8 +34,9 @@ namespace MiniBehaviours
             thrustInput = 0f;
         }
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
             rb = GetComponent<Rigidbody2D>();
         }
 
@@ -47,8 +52,8 @@ namespace MiniBehaviours
 
         private void Update()
         {
-            thrustInput = TankInput.GetForwardThrust();
-            torqueInput = TankInput.GetTurnAxis();
+            thrustInput = TankInput.GetForwardAxis;
+            torqueInput = TankInput.GetTurnAxis;
         }
 
         private void FixedUpdate()

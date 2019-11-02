@@ -1,17 +1,22 @@
 using System.Linq;
+using CryoDI;
 using DefaultNamespace;
+using Game_Basics;
 using UnityEngine;
 
 namespace MiniBehaviours
 {
-    public class TankShooter : MonoBehaviour
+    public class TankShooter : CryoBehaviour
     {
         public Weapon[] WeaponInventory;
         public Weapon _currentWeapon;
         private int _currentWeaponId;
 
-        void Awake()
+        [TypeDependency(typeof(TankShooter))] private IController TankInput { get; set; }
+
+        protected override void Awake()
         {
+            base.Awake();
             InitializeWeaponInventory();
         }
 
@@ -57,8 +62,8 @@ namespace MiniBehaviours
 
         void Update()
         {
-            if (TankInput.IsShooting()) _currentWeapon.WeaponInputStart();
-            if (TankInput.ChangeWeapon()) SwapWeapon();
+            if (TankInput.IsShooting) _currentWeapon.WeaponInputStart();
+            if (TankInput.ChangeWeapon) SwapWeapon();
         }
     }
 }

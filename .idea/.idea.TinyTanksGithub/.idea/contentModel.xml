@@ -2,8 +2,75 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="B:\WorkProjects\TinyTanksGithub" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="CryoDI" t="Include">
+          <e p="CircularDependencyException.cs" t="Include" />
+          <e p="ContainerException.cs" t="Include" />
+          <e p="ContainerExtensions.cs" t="Include" />
+          <e p="CryoBehaviour.cs" t="Include" />
+          <e p="CryoContainer.cs" t="Include" />
+          <e p="DependencyAttribute.cs" t="Include" />
+          <e p="Helpers.cs" t="Include" />
+          <e p="IBuilder.cs" t="Include" />
+          <e p="IInitializable.cs" t="Include" />
+          <e p="ILateInitializable.cs" t="Include" />
+          <e p="Internal" t="Include">
+            <e p="Builder.cs" t="Include" />
+            <e p="BuildUpStack.cs" t="Include" />
+            <e p="ContainerKey.cs" t="Include" />
+            <e p="DILog.cs" t="Include" />
+            <e p="IInternalContainerBuidler.cs" t="Include" />
+            <e p="LifeTimeManager.cs" t="Include" />
+            <e p="LifeTimeStack.cs" t="Include" />
+            <e p="MaskFinder.cs" t="Include" />
+            <e p="PrefabInstantiator.cs" t="Include" />
+            <e p="Providers" t="Include">
+              <e p="FactoryMethodProvider.cs" t="Include" />
+              <e p="FindObjectProvider.cs" t="Include" />
+              <e p="InstanceProvider.cs" t="Include" />
+              <e p="ScenePathProvider.cs" t="Include" />
+              <e p="SingletonProvider.cs" t="Include" />
+            </e>
+            <e p="Resolver.cs" t="Include" />
+            <e p="WeakResolver.cs" t="Include" />
+          </e>
+          <e p="IObjectProvider.cs" t="Include" />
+          <e p="IPrefabInstantiator.cs" t="Include" />
+          <e p="IResolver.cs" t="Include" />
+          <e p="IWeakResolver.cs" t="Include" />
+          <e p="LifeTime.cs" t="Include" />
+          <e p="Param.cs" t="Include" />
+          <e p="ParamAttribute.cs" t="Include" />
+          <e p="Reaction.cs" t="Include" />
+          <e p="Tests" t="Include">
+            <e p="Counters.cs" t="Include" />
+            <e p="Editor" t="Include">
+              <e p="TestCrossDependency.cs" t="Include" />
+              <e p="TestFactoryMethods.cs" t="Include" />
+              <e p="TestLifetimeError.cs" t="Include" />
+              <e p="TestNonPublicProperties.cs" t="Include" />
+              <e p="TestParameters.cs" t="Include" />
+              <e p="TestWeakResolve.cs" t="Include" />
+            </e>
+            <e p="LifetimeTest.cs" t="Include" />
+            <e p="LifetimeTest1.cs" t="Include" />
+            <e p="LifeTimeTest2.cs" t="Include" />
+          </e>
+          <e p="TODO.txt" t="Include" />
+          <e p="UnityStarter.cs" t="Include" />
+          <e p="ViewMediatorBinding" t="Include">
+            <e p="EventBinder.cs" t="Include" />
+            <e p="IMediator.cs" t="Include" />
+            <e p="IMediatorFactory.cs" t="Include" />
+            <e p="SubscribeAttribute.cs" t="Include" />
+            <e p="View.cs" t="Include" />
+            <e p="ViewAttribute.cs" t="Include" />
+            <e p="ViewMediatorContainer.cs" t="Include" />
+          </e>
+          <e p="WrongLifetimeException.cs" t="Include" />
+        </e>
         <e p="HappyUnity" t="Include">
           <e p="Alghoritms" t="Include">
             <e p="MergeSorting.cs" t="Include" />
@@ -48,11 +115,13 @@
               <e p="GameBehaviour.cs" t="Include" />
               <e p="GameUnit.cs" t="Include" />
             </e>
+            <e p="GameContainerSetup.cs" t="Include" />
             <e p="GameField.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
             <e p="GameScreenLogger.cs" t="Include" />
             <e p="Health.cs" t="Include" />
             <e p="HealthBar.cs" t="Include" />
+            <e p="Interfaces.cs" t="Include" />
             <e p="Pause.cs" t="Include" />
             <e p="ProgressBar.cs" t="Include" />
             <e p="RespawnManager.cs" t="Include" />
