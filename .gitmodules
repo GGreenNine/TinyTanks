@@ -1,0 +1,3 @@
+[submodule "Assets/CryoDI"]
+	path = Assets/CryoDI
+	url = https://github.com/GGreenNine/CryoDI
